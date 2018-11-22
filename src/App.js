@@ -9,6 +9,7 @@ const App = () => (
       min={-3}
       max={3}
     />
+    <Counter/>
   </div>
 )
 
