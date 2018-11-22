@@ -18,11 +18,15 @@ class Users extends React.Component {
         <div>
             {
                 this.state.users ? 
-                    this.state.users.map(user => (
-                        <div>
-                            {user.name.first} {user.name.last}
-                        </div>
-                    ))
+                    this.state.users.map ?
+                        this.state.users.map(user => (
+                            <div
+                                key={user.login.uuid}
+                            >
+                                {user.name.first} {user.name.last}
+                            </div>
+                        ))
+                        : 'Error!'
                     :
                     "Ładowanie.."
             }
