@@ -22,7 +22,7 @@ class Form extends React.Component {
                     disabled
                     value={this.state.text}
                     />
-                    </div>
+                </div>
             </div>
         )
     }
