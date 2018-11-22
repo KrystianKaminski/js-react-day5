@@ -7,7 +7,7 @@ class Form extends React.Component {
                 <h1></h1>
                 <input
                     type="text"
-                    onChange={(event) => console.log('Change!')}
+                    onChange={(event) => console.log(event.target.value)}
                 >
                 </input>
             </div>
