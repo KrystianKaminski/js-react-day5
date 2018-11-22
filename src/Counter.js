@@ -53,4 +53,5 @@ Counter.defaultProps = {
   max: 5
 };
 
+
 export default Counter;
