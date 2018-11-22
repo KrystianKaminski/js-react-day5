@@ -1,13 +1,21 @@
-import React from 'react'
+import React from "react";
 
 class Users extends React.Component {
-    render() {
-        return (
-            <div>
+  state = {
+      users: null
+  }
 
-            </div>
-        )
-    }
+  componentDidMount() {
+      
+  }
+
+  render() {
+    return (
+        <div>
+            {this.state.users}
+        </div>
+    );
+  }
 }
 
-export default Users
+export default Users;
