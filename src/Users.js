@@ -16,7 +16,16 @@ class Users extends React.Component {
   render() {
     return (
         <div>
-            {this.state.users}
+            {
+                this.state.users ? 
+                    this.state.users.map(user => (
+                        <div>
+                            {user.name.first} {user.name.last}
+                        </div>
+                    ))
+                    :
+                    "Ładowanie.."
+            }
         </div>
     );
   }
