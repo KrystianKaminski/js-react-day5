@@ -6,7 +6,7 @@ class Users extends React.Component {
   }
 
   componentDidMount() {
-      fetch(`https://randomuser.me/api`)
+      fetch(`https://randomuser.me/api/?results=${this.props.numberOfResults}`)
         .then(response => response.json())
         .then(data => this.setState({
             users: data.results
@@ -33,6 +33,10 @@ class Users extends React.Component {
         </div>
     );
   }
+}
+
+Users.defaultProps = {
+    numberOfResults: 2
 }
 
 export default Users;
