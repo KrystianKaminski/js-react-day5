@@ -1,8 +1,14 @@
 import React from 'react';
 
+import Counter from './Counter'
+
 const App = () => (
   <div>
-    hello
+    <Counter
+      startValue={5}
+      min={-3}
+      max={3}
+    />
   </div>
 )
 
