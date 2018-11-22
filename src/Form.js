@@ -1,15 +1,19 @@
 import React from 'react'
 
 class Form extends React.Component {
+    state = {
+        text: 'Initial value'
+    }
+
     render() {
         return (
             <div>
-                <h1></h1>
+                <h1>{this.state.text}</h1>
                 <input
                     type="text"
-                    onChange={(event) => console.log(event.target.value)}
-                >
-                </input>
+                    value={this.state.text}
+                    onChange={(event) => this.setState({text: event.target.value})}
+                />
             </div>
         )
     }
