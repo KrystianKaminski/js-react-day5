@@ -16,15 +16,17 @@ class Users2 extends React.Component {
     render() {
         return (
             <div>
-                {this.state.users &&
+                {
+                    this.state.users &&
                     this.state.users.map &&
-                        this.state.users.map(user => (
+                        this.state.users.map((user, i) => (
                         <div
-                            key={user.login.uuid}    
+                            key={user.login.uuid}
                         >
-                            {user.email}
+                            {i +1}: {user.email}
                         </div>
-                    ))}
+                    ))
+                    }
             </div>
         )
     }
@@ -33,5 +35,5 @@ class Users2 extends React.Component {
 export default Users2
 
 Users2.defaultProps = {
-    numberOfResults: 5
+    numberOfResults: 10
 }
